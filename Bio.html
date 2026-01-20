@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecos da Solidão | Links Oficiais</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* CSS - Estilização do Site */
+        :root {
+            --bg-color: #0a0a0a;
+            --card-bg: #1a1a1a;
+            --text-primary: #ffffff;
+            --text-secondary: #aaaaaa;
+            --accent-color: #E1306C; /* Cor Instagram */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+        }
+
+        header {
+            margin-bottom: 30px;
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+
+        .profile-header h1 {
+            font-size: 26px;
+            letter-spacing: -1px;
+        }
+
+        .profile-header i {
+            font-size: 24px;
+            color: var(--accent-color);
+        }
+
+        .description {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            padding: 0 10px;
+        }
+
+        /* Botões com Imagem de Fundo */
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .link-card {
+            position: relative;
+            width: 100%;
+            height: 100px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            border: 1px solid #333;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .link-card::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Escurece a foto para o texto aparecer */
+            z-index: 1;
+        }
+
+        .link-card span {
+            position: relative;
+            z-index: 2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+
+        .link-card:hover {
+            transform: scale(1.02);
+        }
+
+        /* Área de Doação */
+        .donation-section {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 10px;
+            border: 1px solid #333;
+        }
+
+        .donation-section h3 {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .value-selector {
+            margin-bottom: 20px;
+        }
+
+        .value-selector label {
+            display: block;
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-bottom: 5px;
+        }
+
+        input[type="number"] {
+            background: #2a2a2a;
+            border: 1px solid #444;
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+            width: 100px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        /* Rodapé Redes Sociais */
+        footer {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        footer a {
+            color: white;
+            font-size: 32px;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="profile-header">
+                <h1>Ecos da Solidão</h1>
+                <i class="fab fa-instagram"></i>
+            </div>
+            <p class="description">
+                Inovação, silêncio e poder. Explore o conteúdo que transforma passos em energia e solidão em destino.
+            </p>
+        </header>
+
+        <main class="links-container">
+            <a href="zyd1nj-pg.myshopify.com" class="link-card" style="background-image: url('https://images.unsplash.com/photo-1493612276216-ee3925520721?auto=format&fit=crop&w=400&q=80');">
+                <span>Começar Transformação Já</span>
+            </a>
+
+            <a href="https://wa.me/message/YHVWCOTE25Y7M1" class="link-card" style="background-image: url('https://images.unsplash.com/photo-1516387938699-a93567ec168e?auto=format&fit=crop&w=400&q=80');">
+                <span>Entre em Contacto</span>
+            </a>
+
+            <div class="donation-section">
+                <h3><i class="fas fa-heart"></i> Apoie o Criador</h3>
+                <div class="value-selector">
+                    <label>Escolha o valor para doar (USD):</label>
+                    <input type="number" id="donation-amount" value="2.00" min="1">
+                </div>
+                <div id="paypal-button-container"></div>
+            </div>
+        </main>
+
+        <footer>
+            <a href="https://wa.me/258835272451" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://youtube.com/@fsociety-x3?si=2WjtG_BseQC3YEPi" target="_blank"><i class="fab fa-youtube"></i></a>
+        </footer>
+    </div>
+
+    <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"></script>
+
+    <script>
+        // Lógica do Pagamento
+        paypal.Buttons({
+            createOrder: function(data, actions) {
+                // Captura o valor digitado no input
+                var selectedAmount = document.getElementById('donation-amount').value;
+                
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: selectedAmount
+                        },
+                        payee: {
+                            email_address: 'edzyneldrogadon@gmail.com'
+                        },
+                        description: 'Doação para Ecos da Solidão'
+                    }]
+                });
+            },
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    alert('Transação concluída com sucesso por ' + details.payer.name.given_name + '!');
+                });
+            },
+            onError: function(err) {
+                console.error('Erro no PayPal:', err);
+                alert('Houve um erro no processamento do pagamento.');
+            }
+        }).render('#paypal-button-container');
+    </script>
+</body>
+</html>
